@@ -1,25 +1,26 @@
-public class CircularQueue {
-    protected int[] data;
+package concept;
+
+public class customQueue {
+    private int[] data;
+
     private static final int DEFAULT_SIZE = 10;
 
-    protected int end = 0;
-    protected int front = 0;
-    private int size = 0;
+    int end = 0;
 
-    public CircularQueue(){
+    public customQueue(){
         this(DEFAULT_SIZE);
     }
 
-    public CircularQueue(int size) {
+    public customQueue(int size) {
         this.data = new int[size];
     }
 
     public boolean isFull() {
-        return size == data.length; // ptr is at last index
+        return end == data.length; // ptr is at last index
     }
 
     public boolean isEmpty() {
-        return size == 0;
+        return end == 0;
     }
 
     public boolean insert(int item) {
@@ -27,8 +28,6 @@ public class CircularQueue {
             return false;
         }
         data[end++] = item;
-        end = end % data.length;
-        size++;
         return true;
     }
 
@@ -37,9 +36,13 @@ public class CircularQueue {
             throw new Exception("Queue is empty");
         }
 
-        int removed = data[front++];
-        front = front % data.length;
-        size--;
+        int removed = data[0];
+
+        // shift the elements to left
+        for (int i = 1; i < end; i++) {
+            data[i-1] = data[i];
+        }
+        end--;
         return removed;
     }
 
@@ -47,20 +50,14 @@ public class CircularQueue {
         if (isEmpty()) {
             throw new Exception("Queue is empty");
         }
-        return data[front];
+        return data[0];
     }
 
     public void display() {
-        if (isEmpty()) {
-            System.out.println("Empty");
-            return;
+        for (int i = 0; i < end; i++) {
+            System.out.print(data[i] + " <- ");
         }
-        int i = front;
-        do {
-            System.out.print(data[i] + " -> ");
-            i++;
-            i %= data.length;
-        } while (i != end);
         System.out.println("END");
     }
+
 }

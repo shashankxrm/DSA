@@ -1,5 +1,6 @@
+package concept;
 
-    public class DynamicStack extends customStack{
+public class DynamicStack extends customStack{
 
         public DynamicStack() {
             super(); // it will call CustomStack()

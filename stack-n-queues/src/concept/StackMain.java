@@ -1,3 +1,5 @@
+package concept;
+
 public class StackMain {
         public static void main(String[] args) throws StackException {
             customStack stack = new DynamicStack(5);
