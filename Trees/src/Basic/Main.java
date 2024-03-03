@@ -1,3 +1,5 @@
+package Basic;
+
 import java.util.Scanner;
 
 public class Main {
@@ -7,7 +9,7 @@ public class Main {
         tree.populate(scanner);
         tree.prettyDisplay();
 
-//    BST tree = new BST();
+//    Basic.BST tree = new Basic.BST();
 //    int[] nums = { 5, 2, 7, 1, 4, 6, 9, 8, 3, 10 };
 //    tree.populate(nums);
 //    tree.display();

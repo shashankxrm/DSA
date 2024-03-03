@@ -1,3 +1,5 @@
+package Basic;
+
 class BST {
     public class Node {
         private int value;
