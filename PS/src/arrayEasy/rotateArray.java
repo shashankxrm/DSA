@@ -1,4 +1,4 @@
-
+package arrayEasy;
 // LC 189 : https://leetcode.com/problems/rotate-array/
 // Given an array, rotate the array to the right by k steps, where k is non-negative.
 // Example 1:
@@ -9,7 +9,6 @@
 //rotate 2 steps to the right: [6,7,1,2,3,4,5]
 //rotate 3 steps to the right: [5,6,7,1,2,3,4]
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class rotateArray {

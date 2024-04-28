@@ -1,10 +1,8 @@
-
+package arrayEasy;
 // LC 136 : https://leetcode.com/problems/single-number/
 // Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.HashSet;
 
 public class singleAppearance {
     public int singleNumber(int[] nums) {

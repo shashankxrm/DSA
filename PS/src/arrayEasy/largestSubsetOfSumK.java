@@ -1,4 +1,4 @@
-
+package arrayEasy;
 // Given an array of integers, find the length of the longest subarray with sum equals to K.
 // Example 1:
 // Input: [1, -1, 5, -2, 3], k = 3

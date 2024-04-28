@@ -1,4 +1,4 @@
-
+package arrayEasy;
 // CN Merge two arrays into a single array: https://www.naukri.com/code360/problems/sorted-array_6613259
 // Given two sorted arrays, merge them such that the elements are not repeated
 // Input: arr1 = [1, 3, 5, 7], arr2 = [2, 4, 6, 8]

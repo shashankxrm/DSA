@@ -1,3 +1,5 @@
+package arrayEasy;
+
 import java.util.HashSet;
 
 public class Main {

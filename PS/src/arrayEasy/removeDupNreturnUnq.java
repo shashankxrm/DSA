@@ -1,4 +1,4 @@
-
+package arrayEasy;
 // LC 26 : https://leetcode.com/problems/remove-duplicates-from-sorted-array/
 // Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
 // The relative order of the elements should be kept the same.
@@ -6,12 +6,6 @@
 // More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result.
 // It does not matter what you leave beyond the first k elements.
 // Return k after placing the final result in the first k slots of nums.
-
-
-import java.util.Arrays;
-import java.util.HashSet;
-
-import static java.lang.reflect.Array.set;
 
 
 public class removeDupNreturnUnq {
