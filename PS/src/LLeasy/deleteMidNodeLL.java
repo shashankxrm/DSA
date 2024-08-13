@@ -12,15 +12,15 @@ public class deleteMidNodeLL {
         ListNode(int val) { this.val = val; }
     }
     public ListNode deleteMiddle(ListNode head) {
-
+        return null;
     }
     static ListNode middle(ListNode head){
         ListNode s = head;
         ListNode f = head;
         while (f != null && f.next != null ){
-            s = s.next;
-            f = f.next.next;
+            return null;
         }
+        return null;
     }
 
 }
