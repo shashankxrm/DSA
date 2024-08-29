@@ -17,31 +17,30 @@ import java.util.List;
 
 public class combinationSum {
     public static void main(String[] args) {
-        int[] candidates = {2, 3, 6, 7};
+        int[] candidates = {2,3,6,7};
         int target = 7;
-        System.out.println(combinationSum(candidates, target));
+        System.out.println(combinationSum(candidates,target));
     }
 
+    public static void sum(int i, int[] arr, List<List<Integer>> list, List<Integer> ds,int target){
+        if(i==arr.length){
+            if(target==0){
+                list.add(new ArrayList<>(ds));
+            }
+            return;
+        }
+        if(arr[i]<=target){
+            ds.add(arr[i]);
+            sum(i,arr,list,ds,target-arr[i]);
+            ds.remove(ds.size()-1);
+        }
+        sum(i+1, arr, list, ds, target);
+    }
     static List<List<Integer>> combinationSum(int[] candidates, int target) {
-        List<List<Integer>> res = new ArrayList<>();
-        List<Integer> comb = new ArrayList<>();
-        backtrack(candidates, target, 0, comb, res);
-        return res;
-    }
+        List<List<Integer>> list= new ArrayList<>();
+        sum(0,candidates,list,new ArrayList<>(),target);
+        return list;
 
-    static void backtrack(int[] candidates, int target, int start, List<Integer> comb, List<List<Integer>> res) {
-        if (target == 0) {
-            res.add(new ArrayList<>(comb));
-            return;
-        }
-        if (target < 0) {
-            return;
-        }
-        for (int i = start; i < candidates.length; i++) {
-            comb.add(candidates[i]);
-            backtrack(candidates, target - candidates[i], i, comb, res);
-            comb.remove(comb.size() - 1);
-        }
     }
 
 }
