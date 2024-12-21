@@ -11,7 +11,7 @@ package arrays;
 // Output: 4
 
 public class searchInRotatedArray {
-    public int search(int[] nums, int target) {
+    public int search(int[] nums, int target) {  // time complexity O(log n) and space complexity O(1)
         int pivot = findPivot(nums);
         // if you don't find a pivot that means array is not rotated.
         // So do normal BS then.

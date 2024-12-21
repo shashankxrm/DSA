@@ -21,6 +21,7 @@ public class minInRotatedArray {
 
     static int findMin(int[] nums) {
         int pivot = pivot(nums);
+        System.out.println(pivot);
         if(pivot == -1){
             return nums[0];
         }

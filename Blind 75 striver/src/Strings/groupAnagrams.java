@@ -24,7 +24,7 @@ import java.util.Arrays;
 
 
 public class groupAnagrams {
-    public List<List<String>> groupAnagrams(String[] strs) { // time : O(n * m * logm), space : O(n * m) where n = strs.length, m = max(strs[i].length())
+    public List<List<String>> groupAnagrams(String[] strs) { // time : O(n * mlogm), space : O(n * m) where n = strs.length, m = max(strs[i].length())
         Map<String, List<String>> map = new HashMap<>();
         for(String str : strs) {
             char[] arr = str.toCharArray();
@@ -46,11 +46,18 @@ public class groupAnagrams {
             StringBuilder sb = new StringBuilder();
             for(int i = 0; i < 26; i++) {
                 sb.append("#").append(freq[i]);
+                System.out.println(sb);
             }
             String key = sb.toString();
             map.putIfAbsent(key, new ArrayList<>());
             map.get(key).add(str);
         }
         return new ArrayList<>(map.values());
+    }
+
+    public static void main(String[] args) {
+        groupAnagrams obj = new groupAnagrams();
+        String[] strs = {"eat", "tea", "tan", "ate", "nat", "bat"};
+        System.out.println(obj.groupAnagrams2(strs));
     }
 }

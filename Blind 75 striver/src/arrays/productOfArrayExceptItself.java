@@ -9,10 +9,12 @@ package arrays;
 // Input: nums = [1,2,3,4]
 // Output: [24,12,8,6]
 
+import java.util.Arrays;
+
 public class productOfArrayExceptItself {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3, 4};
-        System.out.println(productExceptSelf(nums));
+        System.out.println(Arrays.toString(productExceptSelf(nums)));
     }
 
     static int[] productExceptSelf(int[] nums) {

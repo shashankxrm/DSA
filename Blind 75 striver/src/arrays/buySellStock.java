@@ -14,7 +14,7 @@ public class buySellStock {
         int[] prices = {7, 1, 5, 3, 6, 4};
         System.out.println(maxProfit(prices));
     }
-    static int maxProfit(int[] prices) {
+    static int maxProfit(int[] prices) { // O(n) time, O(1) space
         int minPrice = Integer.MAX_VALUE;
         int maxProfit = 0;
         for (int price : prices) {
@@ -26,4 +26,6 @@ public class buySellStock {
         }
         return maxProfit;
     }
+
+
 }

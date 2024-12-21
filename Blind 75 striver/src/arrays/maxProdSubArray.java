@@ -15,8 +15,34 @@ public class maxProdSubArray {
         int[] nums = {2, 3, -2, 4};
         System.out.println(maxProduct(nums));
     }
-
     static int maxProduct(int[] nums) {
+        if (nums == null || nums.length == 0) return 0;
+
+        int maxProd = nums[0];
+        int minProd = nums[0];
+        int result = nums[0];
+
+        for (int i = 1; i < nums.length; i++) {
+            int current = nums[i];
+
+            if (current < 0) {
+                // Swap max and min if the current number is negative
+                int temp = maxProd;
+                maxProd = minProd;
+                minProd = temp;
+            }
+
+            // Calculate the new max and min products including the current number
+            maxProd = Math.max(current, maxProd * current);
+            minProd = Math.min(current, minProd * current);
+
+            // Update the result with the maximum product found so far
+            result = Math.max(result, maxProd);
+        }
+
+        return result;
+    }
+    static int maxProduct1(int[] nums) {
         int n = nums.length;
         int max = nums[0];
         int min = nums[0];

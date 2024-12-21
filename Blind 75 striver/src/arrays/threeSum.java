@@ -20,7 +20,7 @@ public class threeSum {
         System.out.println(threeSum(nums));
     }
 
-    static List<List<Integer>> threeSum(int[] nums) {
+    static List<List<Integer>> threeSum(int[] nums) { // O(n^2) time and O(1) space
         List<List<Integer>> res = new ArrayList<>();
         Arrays.sort(nums);
         int n = nums.length;

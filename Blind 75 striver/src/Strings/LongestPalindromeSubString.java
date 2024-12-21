@@ -1,5 +1,15 @@
 package Strings;
 
+// LC 5 : Longest Palindromic Substring
+// Given a string s, return the longest palindromic substring in s.
+// Example 1:
+// Input: s = "babad"
+// Output: "bab"
+// Note: "aba" is also a valid answer.
+// Example 2:
+// Input: s = "cbbd"
+// Output: "bb"
+
 public class LongestPalindromeSubString {
     public String longestPalindrome(String s) { // time : O(n^2), space : O(1)
         if(s == null || s.length() < 1) return "";
@@ -24,7 +34,7 @@ public class LongestPalindromeSubString {
         return right - left - 1;
     }
     // time complexity of O(n)
-    public String longestPalindrome2(String s) {
+    public String longestPalindrome2(String s) { // time : O(n^2), space : O(1)
         if(s == null || s.length() < 1) return "";
         int start = 0, end = 0;
         for(int i = 0; i < s.length(); i++) {
@@ -46,8 +56,8 @@ public class LongestPalindromeSubString {
         }
         return right - left - 1;
     }
-    // time complexity of O(1)
-    public String longestPalindromemain(String s) {
+
+    public String longestPalindromemain(String s) { // time : O(n^2), space : O(1)
         if(s == null || s.length() < 1) return "";
         int start = 0, end = 0;
         for(int i = 0; i < s.length(); i++) {
