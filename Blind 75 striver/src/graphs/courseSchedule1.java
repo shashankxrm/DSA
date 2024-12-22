@@ -22,7 +22,7 @@ import java.util.Queue;
 import java.util.*;
 
 public class courseSchedule1 {
-    public boolean canFinish(int n, int[][] prerequisites) {
+    public boolean canFinish(int n, int[][] prerequisites) { // time : O(V+E), space : O(V+E)
         List<Integer>[] adj = new List[n];
         int[] indegree = new int[n];
         List<Integer> ans = new ArrayList<>();
