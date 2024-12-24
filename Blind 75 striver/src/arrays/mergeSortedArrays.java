@@ -22,6 +22,28 @@ package arrays;
 import java.util.Arrays;
 
 public class mergeSortedArrays {
+    static void merge2(int[] nums1, int m, int[] nums2, int n) { // time : O(m+n), space : O(1)
+        int i = m - 1, j = n - 1, k = m + n - 1;
+        while (i >= 0 && j >= 0) {
+            if (nums1[i] > nums2[j]) {
+                // Place the larger element at the end
+                nums1[k] = nums1[i];
+                i--; // Move nums1 pointer backward
+            } else {
+                nums1[k] = nums2[j];
+                j--; // Move nums2 pointer backward
+            }
+            k--; // Move the nums1 placement pointer backward
+        }
+
+        // If there are remaining elements in nums2, copy them into nums1
+        // (Remaining nums1 elements are already in place, so no need to handle that case)
+        while (j >= 0) {
+            nums1[k] = nums2[j];
+            j--; // Move nums2 pointer backward
+            k--; // Move nums1 placement pointer backward
+        }
+    }
     static void merge(int[] nums1, int m, int[] nums2, int n) { // time : O((m+n)log(m+n)), space : O(1)
         if(n == 0)return;
         if (m == 0) {
@@ -40,19 +62,7 @@ public class mergeSortedArrays {
         Arrays.sort(nums1);
     }
     // better approach
-    static void merge2(int[] nums1, int m, int[] nums2, int n) { // time : O(m+n), space : O(1)
-        int i = m - 1, j = n - 1, k = m + n - 1;
-        while (i >= 0 && j >= 0) {
-            if (nums1[i] > nums2[j]) {
-                nums1[k--] = nums1[i--];
-            } else {
-                nums1[k--] = nums2[j--];
-            }
-        }
-        while (j >= 0) {
-            nums1[k--] = nums2[j--];
-        }
-    }
+
 
     public static void main(String[] args) {
         int[] nums1 = {1};
