@@ -16,7 +16,7 @@ package arrays;
 
 import java.util.*;
 public class fourSum {
-    public static List<List<Integer>> fourSum(int[] nums, int target) {
+    public static List<List<Integer>> fourSum(int[] nums, int target) { // O(n^3) time and O(1) space
         int n = nums.length; // size of the array
         List<List<Integer>> ans = new ArrayList<>();
 
