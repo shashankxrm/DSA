@@ -14,7 +14,7 @@ public class removeNthNodefrmTail {
         ListNode slow = dummy;
         ListNode fast = dummy;
 
-        for(int i = 1; i <= n+1; i++){
+        for(int i = 1; i <= n+1; i++){ // n+1 because we need to reach the node before the node to be deleted
             fast = fast.next;
         }
 
