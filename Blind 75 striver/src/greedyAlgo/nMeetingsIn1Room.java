@@ -18,14 +18,14 @@ package greedyAlgo;
 import java.util.Arrays;
 
 public class nMeetingsIn1Room {
-    public static int maxMeetings(int start[], int end[], int n) {
+    public static int maxMeetings(int start[], int end[], int n) { // O(nlogn) O(n)
         int[][] meetings = new int[n][3];
         for (int i = 0; i < n; i++) {
             meetings[i][0] = start[i];
             meetings[i][1] = end[i];
             meetings[i][2] = i + 1;
         }
-        Arrays.sort(meetings, (a, b) -> a[1] - b[1]);
+        Arrays.sort(meetings, (a, b) -> a[1] - b[1]); // sort by end time
         int count = 1;
         int endtime = meetings[0][1];
         for (int i = 1; i < n; i++) {
@@ -36,4 +36,5 @@ public class nMeetingsIn1Room {
         }
         return count;
     }
+
 }
