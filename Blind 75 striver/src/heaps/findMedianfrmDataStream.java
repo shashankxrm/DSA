@@ -1,4 +1,4 @@
-package heap;
+package heaps;
 
 // LC # 295 : Find Median from Data Stream
 // Median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value and
