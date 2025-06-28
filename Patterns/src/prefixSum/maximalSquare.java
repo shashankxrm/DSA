@@ -4,7 +4,6 @@ package prefixSum;
 // Given a 2D binary matrix filled with 0's and 1's, find the largest square containing only 1's and return its area.
 // Example 1: Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 // Output: 4 Explanation: The largest square has a side length of 2, so its area is 2 * 2 = 4.
-
 public class maximalSquare {
     public int maximalSquare(char[][] matrix) { // Time: O(m * n), Space: O(n)
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return 0;

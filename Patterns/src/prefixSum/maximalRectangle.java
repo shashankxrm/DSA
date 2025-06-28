@@ -4,7 +4,6 @@ package prefixSum;
 // Given a rows x cols binary matrix filled with 0's and 1's, find the largest rectangle containing only 1's and return its area.
 // Example 1: Input: matrix = [["1","0","1","0","0"],["1","0","1","1","1"],["1","1","1","1","1"],["1","0","0","1","0"]]
 // Output: 6 Explanation: The largest rectangle has an area of 6 (3 rows by 2 columns).
-
 public class maximalRectangle {
     public int maximalRectangle(char[][] matrix) { // Time: O(m * n), Space: O(n)
         if (matrix == null || matrix.length == 0 || matrix[0].length == 0) return 0;

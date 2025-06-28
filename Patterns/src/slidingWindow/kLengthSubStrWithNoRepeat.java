@@ -4,7 +4,6 @@ package slidingWindow;
 // Given a string s and an integer k, return the number of substrings of length k with no repeating characters.
 // Example 1: Input: s = "havefunonleetcode", k = 5 Output: 6 Explanation: The substrings are "havef", "avefu", "vefun",
 // "efuno", "funon", and "onlet".
-
 public class kLengthSubStrWithNoRepeat {
     public int numKLenSubstrNoRepeats(String s, int k) { // Time: O(n), Space: O(1)
         if (k > s.length()) return 0; // If k is greater than string length, return 0
