@@ -10,7 +10,6 @@ import java.util.*;
 public class findKclosestEle {
     public List<Integer> findClosestElements(int[] arr, int k, int x) {
         int left = 0, right = arr.length - 1;
-
         while (right - left >= k) {
             if (Math.abs(arr[left] - x) > Math.abs(arr[right] - x)) {
                 left++;
@@ -18,12 +17,10 @@ public class findKclosestEle {
                 right--;
             }
         }
-
         List<Integer> result = new ArrayList<>();
         for (int i = left; i < left + k; i++) {
             result.add(arr[i]);
         }
-
         return result;
     }
 }

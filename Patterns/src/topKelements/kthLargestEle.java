@@ -1,9 +1,7 @@
 package topKelements;
 
-// LC215: Kth Largest Element in an Array
-// Find the kth largest element in an unsorted array. Note that it is the kth largest element in the sorted order,
-// not the kth distinct element.
-// Example 1: Input: nums = [3,2,1,5,6,4], k = 2 Output: 5
+// LC215: Kth Largest Element in an Array. Find the kth largest element in an unsorted array. Note that it is the kth
+// largest element in the sorted order, not the kth distinct element.Example 1: Input: nums = [3,2,1,5,6,4], k = 2 Output: 5
 public class kthLargestEle {
     public int findKthLargest(int[] nums, int k) { // Time: O(n) on average, Space: O(1) for QuickSelect.
         int targetIdx = nums.length - k;
