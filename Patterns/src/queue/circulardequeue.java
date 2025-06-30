@@ -8,11 +8,7 @@ public class circulardequeue {
     int capacity;     // Maximum capacity of the deque
     // Constructor to initialize the circular deque with a given capacity
     public circulardequeue(int k) {
-        array = new int[k];
-        size = 0;
-        capacity = k;
-        front = 0;
-        rear = k - 1; // Rear starts at the end for initial empty state
+        array = new int[k]; size = 0; capacity = k; front = 0; rear = k - 1; // Rear starts at the end for initial empty state
     }
     // Adds an item at the front of Deque. Returns true if successful.
     public boolean insertFront(int value) {
