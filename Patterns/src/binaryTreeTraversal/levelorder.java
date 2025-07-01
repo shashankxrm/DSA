@@ -23,7 +23,7 @@ public class levelorder {
                     queue.offer(currentNode.right);
                 }
             }
-            result.add(currentLevel);
+            result.add(currentLevel); // result.add(0, currentLevel); to reverse the order
         }
         return result;
     }
