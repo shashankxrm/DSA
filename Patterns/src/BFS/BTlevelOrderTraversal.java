@@ -20,7 +20,7 @@ public class BTlevelOrderTraversal {
                 if (node.left != null) queue.offer(node.left);
                 if (node.right != null) queue.offer(node.right);
             }
-            result.add(level);
+            result.add(level); // result.add(0, level) to reverse the order
         }
         return result;
     }
