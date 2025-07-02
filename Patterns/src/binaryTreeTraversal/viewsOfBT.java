@@ -1,24 +1,18 @@
-package binaryTreeTraversal;
-import java.util.*;
+package binaryTreeTraversal; import java.util.*;
 class Pair<K, V> {
     private K key;
     private V value;
-
     public Pair(K key, V value) {
         this.key = key;
         this.value = value;
     }
-
     public K getKey() {
         return key;
     }
-
     public V getValue() {
         return value;
     }
 }
-
-
 public class viewsOfBT {
     // Right View of Binary Tree
     public List<Integer> rightSideView(TreeNode root) { // Time: O(n), Space: O(n)
@@ -74,16 +68,13 @@ public class viewsOfBT {
         Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
         queue.offer(new Pair<>(root, 0)); // Pair of node and its column index
         int minColumn = 0, maxColumn = 0;
-
         while (!queue.isEmpty()) {
             Pair<TreeNode, Integer> currentPair = queue.poll();
             TreeNode currentNode = currentPair.getKey();
             int columnIndex = currentPair.getValue();
-
             if (!columnMap.containsKey(columnIndex)) {
                 columnMap.put(columnIndex, currentNode.val); // Store the first node in this column
             }
-
             if (currentNode.left != null) {
                 queue.offer(new Pair<>(currentNode.left, columnIndex - 1));
                 minColumn = Math.min(minColumn, columnIndex - 1);
@@ -93,7 +84,6 @@ public class viewsOfBT {
                 maxColumn = Math.max(maxColumn, columnIndex + 1);
             }
         }
-
         for (int i = minColumn; i <= maxColumn; i++) {
             result.add(columnMap.get(i));
         }
@@ -107,14 +97,11 @@ public class viewsOfBT {
         Queue<Pair<TreeNode, Integer>> queue = new LinkedList<>();
         queue.offer(new Pair<>(root, 0)); // Pair of node and its column index
         int minColumn = 0, maxColumn = 0;
-
         while (!queue.isEmpty()) {
             Pair<TreeNode, Integer> currentPair = queue.poll();
             TreeNode currentNode = currentPair.getKey();
             int columnIndex = currentPair.getValue();
-
             columnMap.put(columnIndex, currentNode.val); // Update the node value for this column
-
             if (currentNode.left != null) {
                 queue.offer(new Pair<>(currentNode.left, columnIndex - 1));
                 minColumn = Math.min(minColumn, columnIndex - 1);
@@ -124,7 +111,6 @@ public class viewsOfBT {
                 maxColumn = Math.max(maxColumn, columnIndex + 1);
             }
         }
-
         for (int i = minColumn; i <= maxColumn; i++) {
             result.add(columnMap.get(i));
         }

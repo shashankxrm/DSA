@@ -14,7 +14,7 @@ class Pair{
     int hd;
     Pair(TreeNode node, int hd){
         this.node = node;
-        this.hd = hd;
+        this.hd = hd; // horizontal distance
     }
 }
 

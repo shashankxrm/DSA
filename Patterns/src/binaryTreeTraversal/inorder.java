@@ -4,7 +4,7 @@ import java.util.*;
 // Given a binary tree, return the inorder traversal of its nodes' values.
 // Example: Input: root = [1,null,2,3] Output: [1,3,2]
 // Example: Input: root = [1,2,3,4,5,null,8,null,null,6,7,9] Output: [ 4,2,6,7,5,1,3,8,9]
-public class inorderTraversal {
+public class inorder {
     public List<Integer> inorderTraversal(TreeNode root) { // Time: O(n), Space: O(n)
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
